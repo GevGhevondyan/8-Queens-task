@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/8-Queens-task/static/css/main.2e84635f.css",
+    "main.js": "/8-Queens-task/static/js/main.f1592261.js",
+    "static/media/queenBlack.svg": "/8-Queens-task/static/media/queenBlack.cf388bf415c0d33ec16f23593b8d0d91.svg",
+    "static/media/queenWhite.svg": "/8-Queens-task/static/media/queenWhite.7a1aecff0f22ff68c43f9b7f8a81d0b4.svg",
+    "index.html": "/8-Queens-task/index.html",
+    "main.2e84635f.css.map": "/8-Queens-task/static/css/main.2e84635f.css.map",
+    "main.f1592261.js.map": "/8-Queens-task/static/js/main.f1592261.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e84635f.css",
+    "static/js/main.f1592261.js"
+  ]
+}
