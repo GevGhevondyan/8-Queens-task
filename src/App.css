@@ -1,38 +1,236 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+::-webkit-scrollbar {
+    width: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar-thumb {
+    background: #888;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
-.App-link {
-  color: #61dafb;
+.mainWrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+    gap: 4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mainWrapper > div {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.418);
+    background-color: white;
+    width: 100%;
+    height: 93%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+
+.chessTable {
+    width: 72rem;
+    height: 72rem;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.chessSquare {
+    width: 9rem;
+    height: 9rem;
+    position: relative;
+}
+
+.squareLetter {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.squareNumber {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.chessSquare.black .squareLetter,
+.chessSquare.black .squareNumber {
+    color: #f0d9b5;
+}
+.chessSquare.white .squareLetter,
+.chessSquare.white .squareNumber {
+    color: #b58863;
+}
+
+.combinationGeneratorWrapper {
+    gap: 3rem;
+}
+
+.combinationGeneratorButton {
+    width: 100%;
+    height: 5rem;
+    cursor: pointer;
+    background-color: #33b249;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.combinationGeneratorButton:hover {
+    background-color: #38d352;
+}
+
+.combinationGeneratorButton:active {
+    background-color: #27b33e;
+    box-shadow: inset 0 0 8px black;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.combinationsWrapper {
+    gap: 2rem;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.combinations {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+.combination {
+    width: 100%;
+    height: 4rem;
+    font-size: 1.5rem;
+    background-color: rgb(233, 233, 233);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.combination:hover {
+    background-color: rgb(216, 216, 216);
+}
+
+.combination:active {
+    background-color: rgb(201, 201, 201);
+}
+
+.queen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7rem;
+    height: 7rem;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.circle {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100rem;
+    background-color: rgba(0, 0, 0, 0.377);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.settingsWrapper {
+    gap: 2rem;
+}
+
+.settingsContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    gap: 1rem;
+}
+
+.boardColors {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.boardColors > div {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.boardColors > div > div {
+    width: 2rem;
+    height: 2rem;
+}
+
+.firstColor1 {
+    background-color: #f0d9b5;
+}
+
+.secondColor1 {
+    background-color: #b58863;
+}
+
+.firstColor2 {
+    background-color: #ebecd0;
+}
+
+.secondColor2 {
+    background-color: #779556;
+}
+
+.firstColor3 {
+    background-color: #dae9f2;
+}
+
+.secondColor3 {
+    background-color: #6e99c0;
+}
+
+.firstColor4 {
+    background-color: #fbe9a7;
+}
+
+.secondColor4 {
+    background-color: #145f4c;
+}
+
+.queenColors {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.queenColors > img {
+    cursor: pointer;
 }
